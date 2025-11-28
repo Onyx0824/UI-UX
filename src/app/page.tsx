@@ -1,21 +1,21 @@
 // src/app/page.tsx   ← 全部覆蓋貼上這段（最終完美版）
 "use client"
 
-import { Button } from "../components/ui/button"
-import { ModeToggle } from "../components/ui/mode-toggle"
-import { Card } from "../components/ui/card"
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../components/ui/sheet"
-import { Input } from "../components/ui/input"
-import { Textarea } from "../components/ui/textarea"
-import { Label } from "../components/ui/label"
+import { Button } from "@/components/ui/button"
+import { ModeToggle } from "@/components/ui/mode-toggle"
+import { Card } from "@/components/ui/card"
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
 import { ArrowRight, Sparkles, Palette, Zap, Mail, Github, Linkedin, Send, ExternalLink, Figma } from "lucide-react"
 import { motion } from "framer-motion"
 import { useRef } from "react"
 import { InstagramLogoIcon } from "@radix-ui/react-icons"
 
 export default function Home() {
-  const portfolioRef = useRef<HTMLDivElement>(null)
-  const aboutRef = useRef<HTMLDivElement>(null)
+  const portfolioRef = useRef<HTMLDivElement>(null!)
+  const aboutRef = useRef<HTMLDivElement>(null!)
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" })
